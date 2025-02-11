@@ -4,6 +4,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -14,33 +15,37 @@ import jakarta.persistence.ManyToMany;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
-
 @Entity
 @Table(name = "tb_produto")
 public class Produto {
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 	private String nome;
+	
+	@Column(columnDefinition = "TEXT")
 	private String descricao;
 	private Double preco;
-	private String imgUrl;
 	
+	@Column(columnDefinition = "TEXT")
+	private String imgUrl;
 	
 	@ManyToMany
 	@JoinTable(name = "tb_produto_categoria", joinColumns =
-	@JoinColumn(name = "produto_id"), inverseJoinColumns = 
+	@JoinColumn(name = "produto_id"), inverseJoinColumns =
 	@JoinColumn(name = "categoria_id"))
 	private Set<Categoria> categorias = new HashSet<>();
 	
 	@OneToMany(mappedBy = "id.produto")
 	private Set<ItemDoPedido> items = new HashSet<>();
 	
+	
 	public Produto() {
+		
 	}
-
-	public Produto(long id, String nome, String descricao, Double preco, String imgUrl) {
+	
+	public Produto(long id, String nome, String descricao, Double preco, String imgUrl) {	
 		this.id = id;
 		this.nome = nome;
 		this.descricao = descricao;
@@ -87,21 +92,14 @@ public class Produto {
 	public void setImgUrl(String imgUrl) {
 		this.imgUrl = imgUrl;
 	}
-
-	public Set<Categoria> getCategorias() {
-		return categorias;
-	}
-
-	public void setCategorias(Set<Categoria> categorias) {
-		this.categorias = categorias;
-	}
-
-	public Set<ItemDoPedido> getItems() {
+	
+	public Set<ItemDoPedido> getItems(){
 		return items;
 	}
-	 public List<Pedido> getPedido(){
-		 return items.stream().map(x -> x.getPedido()).toList();
-	 }
 	
+	public List<Pedido> getPedido(){
+		
+		return items.stream().map(x -> x.getPedido()).toList();
+	}
 	
 }
