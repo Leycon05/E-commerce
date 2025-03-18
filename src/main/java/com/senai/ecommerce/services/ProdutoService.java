@@ -8,6 +8,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
+<<<<<<< HEAD
 import com.senai.ecommerce.dto.CategoriaDTO;
 import com.senai.ecommerce.dto.ProdutoDTO;
 import com.senai.ecommerce.entities.Categoria;
@@ -17,13 +18,22 @@ import com.senai.ecommerce.repositories.ProdutoRepository;
 
 import jakarta.transaction.Transactional;
 
+=======
+import com.senai.ecommerce.dto.ProdutoDTO;
+import com.senai.ecommerce.entities.Produto;
+import com.senai.ecommerce.repositories.ProdutoRepository;
+
+>>>>>>> 7c15c46dc7c7c26ce2e8dd2f369b41148c98acff
 @Service
 public class ProdutoService {
 
 	@Autowired
 	ProdutoRepository repo;
+<<<<<<< HEAD
 	@Autowired
 	CategoriaRepository CategoriaRepository;
+=======
+>>>>>>> 7c15c46dc7c7c26ce2e8dd2f369b41148c98acff
 	
 	public List<ProdutoDTO> buscarTodos() {
 		List<Produto> list = repo.findAll();
@@ -35,6 +45,7 @@ public class ProdutoService {
 		Page<Produto> result = repo.findAll(pagina);
 		return result.map(x -> new ProdutoDTO(x));
 	}
+<<<<<<< HEAD
 	@Transactional
 	public ProdutoDTO inserir(ProdutoDTO dto) {
 		Produto prod = new Produto();
@@ -52,4 +63,7 @@ public class ProdutoService {
 		return new ProdutoDTO(prod);
 		
 	}
+=======
+	
+>>>>>>> 7c15c46dc7c7c26ce2e8dd2f369b41148c98acff
 }

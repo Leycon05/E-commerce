@@ -7,8 +7,11 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+<<<<<<< HEAD
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+=======
+>>>>>>> 7c15c46dc7c7c26ce2e8dd2f369b41148c98acff
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -32,10 +35,13 @@ public class ProdutoController {
 		return ResponseEntity.ok(service.buscarPagina(pagina));
 	}
 
+<<<<<<< HEAD
 	@PostMapping("/criar")
 	public ResponseEntity<ProdutoDTO> inserir(@RequestBody ProdutoDTO dto){
 		dto = service.inserir(dto);
 		return ResponseEntity.ok(dto);
 	}
+=======
+>>>>>>> 7c15c46dc7c7c26ce2e8dd2f369b41148c98acff
 	
 }

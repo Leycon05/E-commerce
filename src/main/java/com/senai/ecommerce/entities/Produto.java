@@ -18,8 +18,11 @@ import jakarta.persistence.Table;
 @Entity
 @Table(name = "tb_produto")
 public class Produto {
+<<<<<<< HEAD
 	
 	
+=======
+>>>>>>> 7c15c46dc7c7c26ce2e8dd2f369b41148c98acff
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -42,7 +45,11 @@ public class Produto {
 	@OneToMany(mappedBy = "id.produto")
 	private Set<ItemDoPedido> items = new HashSet<>();
 	
+<<<<<<< HEAD
 	//teste
+=======
+	
+>>>>>>> 7c15c46dc7c7c26ce2e8dd2f369b41148c98acff
 	public Produto() {
 		
 	}
@@ -103,6 +110,7 @@ public class Produto {
 		
 		return items.stream().map(x -> x.getPedido()).toList();
 	}
+<<<<<<< HEAD
 	public Set<Categoria> getCategorias() {
 		return categorias;
 	}
@@ -110,4 +118,7 @@ public class Produto {
 	public void setCategorias(Set<Categoria> categorias) {
 		this.categorias = categorias;
 	}
+=======
+	
+>>>>>>> 7c15c46dc7c7c26ce2e8dd2f369b41148c98acff
 }
