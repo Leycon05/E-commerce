@@ -42,7 +42,7 @@ public class Produto {
 	@OneToMany(mappedBy = "id.produto")
 	private Set<ItemDoPedido> items = new HashSet<>();
 	
-	
+	//teste
 	public Produto() {
 		
 	}
