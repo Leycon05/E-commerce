@@ -1,6 +1,6 @@
 package com.senai.ecommerce.dto;
 
-<<<<<<< HEAD
+
 import com.senai.ecommerce.entities.Categoria;
 
 public class CategoriaDTO {
@@ -41,9 +41,4 @@ public class CategoriaDTO {
 		this.nome = nome;
 	}
 	
-	
-=======
-public record CategoriaDTO(String nome) {
->>>>>>> 7c15c46dc7c7c26ce2e8dd2f369b41148c98acff
-
 }

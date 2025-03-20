@@ -1,12 +1,10 @@
 package com.senai.ecommerce.dto;
 
-<<<<<<< HEAD
 import java.util.ArrayList;
 import java.util.List;
 
 import com.senai.ecommerce.entities.Categoria;
-=======
->>>>>>> 7c15c46dc7c7c26ce2e8dd2f369b41148c98acff
+
 import com.senai.ecommerce.entities.Produto;
 
 public class ProdutoDTO{
@@ -16,12 +14,9 @@ public class ProdutoDTO{
 	private	String descricao;
 	private Double preco;
 	private String imgUrl;
-	
-<<<<<<< HEAD
+
 	private List<CategoriaDTO> categorias = new ArrayList<>();
 	
-=======
->>>>>>> 7c15c46dc7c7c26ce2e8dd2f369b41148c98acff
 	public ProdutoDTO(){
 		
 	}
@@ -40,15 +35,12 @@ public class ProdutoDTO{
 		descricao = p.getDescricao();
 		preco = p.getPreco();
 		imgUrl = p.getImgUrl();
-<<<<<<< HEAD
+
 		for (Categoria cat : p.getCategorias()){
 		categorias.add(new CategoriaDTO(cat));
 	}
 	}
-=======
-	}
 
->>>>>>> 7c15c46dc7c7c26ce2e8dd2f369b41148c98acff
 	public String getNome() {
 		return nome;
 	}
@@ -88,7 +80,6 @@ public class ProdutoDTO{
 	public void setId(Long id) {
 		this.id = id;
 	}
-<<<<<<< HEAD
 	public List<CategoriaDTO> getCategorias() {
 		return categorias;
 	}
@@ -97,8 +88,5 @@ public class ProdutoDTO{
 		this.categorias = categorias;
 	}
 
-=======
-	
->>>>>>> 7c15c46dc7c7c26ce2e8dd2f369b41148c98acff
 	
 }
