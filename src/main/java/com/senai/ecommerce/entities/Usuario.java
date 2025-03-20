@@ -75,6 +75,10 @@ public class Usuario {
 	public void setRoles(String roles) {
 		this.roles = roles;
 	}
+	public void setCliente(Usuario usuario) {
+		// TODO Auto-generated method stub
+		
+	}
 	
 	
 }

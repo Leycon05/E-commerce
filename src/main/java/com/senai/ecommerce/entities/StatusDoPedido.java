@@ -8,4 +8,9 @@ public enum StatusDoPedido {
 	ENTREGUE,
 	CANCELADO;
 
+	public static StatusDoPedido AGUARDANDO_PAGAMENTO() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }
