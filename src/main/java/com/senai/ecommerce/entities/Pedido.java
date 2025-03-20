@@ -41,6 +41,15 @@ public class Pedido {
 	public Pedido() {
 		
 	}
+	
+	public Usuario getCliente() {
+		return cliente;
+	}
+
+	public void setCliente(Usuario cliente) {
+		this.cliente = cliente;
+	}
+
 	public Pedido(long id, Instant momento, StatusDoPedido status) {
 		this.id = id;
 		this.momento = momento;
